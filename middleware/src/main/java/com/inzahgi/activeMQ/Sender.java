@@ -1,4 +1,4 @@
-package com.inzahgi;
+package com.inzahgi.activeMQ;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;

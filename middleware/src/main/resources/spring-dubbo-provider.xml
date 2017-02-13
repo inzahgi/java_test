@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+
+    <dubbo:application name="Demo-provider"  owner="wenxin.liang"  />
+
+	<dubbo:registry protocol="zookeeper" address="imageZK1:2181,imageZK2:2181,imageZK3:2181" check="false"  />
+
+	<dubbo:monitor protocol="registry" />
+	
+	<dubbo:protocol name="dubbo" host="${dubbo.host}" port="${dubbo.port}"/>
+
+	<dubbo:service interface="com.inzahgi.DemoService" ref="DemoServiceImpl" timeout="10000" />
+
+	<!-- 和本地bean一样实现服务 -->
+	<bean id="DemoServiceImpl" class="com.inzahgi.DemoServiceImpl" />
+</beans>
