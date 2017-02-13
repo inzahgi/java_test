@@ -1,4 +1,4 @@
-package com.inzahgi;
+package com.inzahgi.consumer;
 
 /**
  * @author kai-zheng
@@ -15,9 +15,9 @@ public class Consumer {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"classpath*:spring-*.xml"});
         context.start();
 
-        DemoService demoService = (DemoService)context.getBean("demoService"); // »ñÈ¡Ô¶³Ì·þÎñ´úÀí
-        String hello = demoService.sayHello("world"); // Ö´ÐÐÔ¶³Ì·½·¨
+        DemoService demoService = (DemoService)context.getBean("demoService"); // ï¿½ï¿½È¡Ô¶ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        String hello = demoService.sayHello("world"); // Ö´ï¿½ï¿½Ô¶ï¿½Ì·ï¿½ï¿½ï¿½
 
-        System.out.println( hello ); // ÏÔÊ¾µ÷ÓÃ½á¹û
+        System.out.println( hello ); // ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ã½ï¿½ï¿½
     }
 }

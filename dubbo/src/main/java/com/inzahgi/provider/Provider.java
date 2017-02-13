@@ -1,4 +1,4 @@
-package com.inzahgi; /**
+package com.inzahgi.provider; /**
  * @author kai-zheng
  * @version 1.0.0
  * @date 2015-11-21 17:12
