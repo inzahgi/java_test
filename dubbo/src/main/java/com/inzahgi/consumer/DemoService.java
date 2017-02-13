@@ -1,4 +1,6 @@
-package com.inzahgi;
+package com.inzahgi.consumer;
+
+
 
 /**
  * @author kai-zheng
